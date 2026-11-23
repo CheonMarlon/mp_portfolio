@@ -1,0 +1,57 @@
+#gb {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #000;
+  touch-action: none;
+}
+#gb canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+#gb .gbt,
+#gb .skip {
+  font:
+    700 11px 'Courier New',
+    monospace;
+  letter-spacing: 0.2em;
+  position: absolute;
+  bottom: 22px;
+}
+#gb .gbt {
+  left: 20px;
+  color: #777;
+  transition: opacity 0.3s;
+}
+#gb .skip {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  bottom: 18px;
+  font:
+    700 11px 'Courier New',
+    monospace;
+  letter-spacing: 0.2em;
+  color: #888;
+  padding: 10px 14px;
+  border: 1px solid #333;
+  border-radius: 99px;
+}
+#gb .skip:hover,
+#gb .skip:focus-visible {
+  color: #000;
+  background: #fff;
+  outline: none;
+}
+html.ld {
+  overflow: hidden;
+}
+html.ld .title .ln i,
+html.ld .arc,
+html.ld .me {
+  animation-play-state: paused;
+}

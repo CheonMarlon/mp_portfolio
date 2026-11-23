@@ -1,0 +1,25 @@
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+  border-left: 1px solid #1c1c1c;
+}
+::-webkit-scrollbar-thumb {
+  background: #cfcfcf;
+  border: 2px solid #000;
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+::-webkit-scrollbar-corner {
+  background: #000;
+}
+@supports not selector(::-webkit-scrollbar) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #cfcfcf #000;
+  }
+}

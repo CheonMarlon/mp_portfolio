@@ -1,0 +1,32 @@
+/* sections */
+section {
+  padding: 120px 6vw;
+}
+.lab {
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  color: var(--mut);
+  font-weight: 800;
+}
+.rv {
+  opacity: 0;
+  transform: translateY(34px);
+  transition:
+    opacity 0.9s,
+    transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.rv.in {
+  opacity: 1;
+  transform: none;
+}
+@media (max-width: 760px) {
+  section {
+    padding: 90px 6vw;
+  }
+}
+@media (min-width: 1800px) {
+  section {
+    padding-left: 8vw;
+    padding-right: 8vw;
+  }
+}

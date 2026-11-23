@@ -1,0 +1,171 @@
+.mono {
+  position: fixed;
+  top: 18px;
+  left: 20px;
+  z-index: 50;
+  font-family: var(--d);
+  font-weight: 900;
+  font-size: 14px;
+  text-decoration: none;
+}
+nav {
+  position: fixed;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  background: #fff;
+  border-radius: 999px;
+  padding: 3px;
+  display: flex;
+  gap: 0;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+}
+nav a {
+  color: #000;
+  height: 30px;
+  min-width: 32px;
+  padding: 0 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 99px;
+  text-decoration: none;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+nav a:hover,
+nav a:focus-visible {
+  background: #ececec;
+  outline: none;
+}
+nav a:focus-visible {
+  box-shadow: inset 0 0 0 2px #000;
+}
+nav a.on,
+nav a.on:hover {
+  background: #000;
+  color: #fff;
+}
+nav svg {
+  width: 15px;
+  height: 15px;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+nav a span {
+  max-width: 0;
+  overflow: hidden;
+  opacity: 0;
+  white-space: nowrap;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition:
+    max-width 0.35s,
+    opacity 0.3s,
+    margin 0.35s;
+}
+nav a.on span,
+nav a:hover span,
+nav a:focus-visible span {
+  max-width: 80px;
+  opacity: 1;
+  margin-left: 6px;
+}
+@media (max-width: 760px) {
+  .mono {
+    display: none;
+  }
+  nav {
+    padding: 3px;
+  }
+  nav a {
+    height: 30px;
+    min-width: 32px;
+    padding: 0 8px;
+  }
+  nav a:not(.on) span {
+    display: none;
+  }
+}
+nav .bg {
+  display: none;
+}
+@media (max-width: 760px) {
+  nav {
+    left: auto;
+    right: 14px;
+    top: calc(12px + env(safe-area-inset-top, 0px));
+    transform: none;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 22px;
+    padding: 3px;
+  }
+  nav.open {
+    min-width: 176px;
+  }
+  nav .bg {
+    all: unset;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    width: 40px;
+    height: 34px;
+    align-self: flex-end;
+    cursor: pointer;
+    border-radius: 99px;
+  }
+  nav .bg:focus-visible {
+    box-shadow: inset 0 0 0 2px #000;
+  }
+  nav .bg i {
+    display: block;
+    width: 16px;
+    height: 2px;
+    background: #000;
+    border-radius: 2px;
+    transition:
+      transform 0.3s,
+      opacity 0.3s;
+  }
+  nav.open .bg i:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+  nav.open .bg i:nth-child(2) {
+    opacity: 0;
+  }
+  nav.open .bg i:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+  nav a {
+    display: none;
+    height: 40px;
+    padding: 0 14px;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  nav.open a {
+    display: flex;
+  }
+  nav a span,
+  nav a:not(.on) span {
+    display: inline !important;
+    max-width: none;
+    opacity: 1;
+    margin: 0;
+    font-size: 14px;
+  }
+  .mono {
+    display: block !important;
+  }
+}
