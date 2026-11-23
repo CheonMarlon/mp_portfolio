@@ -1,0 +1,29 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 28px 6vw;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--mut);
+}
+footer b {
+  color: #fff;
+}
+footer button {
+  all: unset;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 800;
+}
+footer button:hover {
+  text-decoration: underline;
+}
+@media (max-width: 420px) {
+  footer {
+    justify-content: center;
+    text-align: center;
+  }
+}

@@ -1,0 +1,39 @@
+.rv {
+  transform: translateY(46px) scale(0.985);
+  transition:
+    opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1) calc(var(--i, 0) * 80ms),
+    transform 1s cubic-bezier(0.2, 0.8, 0.2, 1) calc(var(--i, 0) * 80ms);
+}
+#sp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  z-index: 60;
+  pointer-events: none;
+}
+#home .title {
+  translate: 0 calc(var(--p, 0) * 16vh);
+  opacity: calc(1 - var(--p, 0) * 1.15);
+}
+#home .me {
+  translate: 0 calc(var(--p, 0) * 7vh);
+  scale: calc(1 + var(--p, 0) * 0.06);
+}
+#home .arc {
+  translate: 0 calc(var(--p, 0) * 10vh);
+}
+.scene {
+  scale: calc(0.9 + 0.1 * var(--e, 1));
+  translate: 0 calc((1 - var(--e, 1)) * 40px);
+}
+.fold {
+  translate: 0 calc((var(--p, 0.5) - 0.5) * -70px);
+}
+section h2 {
+  translate: calc((0.5 - var(--p, 0.5)) * 6vw) 0;
+}

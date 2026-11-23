@@ -1,0 +1,50 @@
+:root {
+  --bg: #000;
+  --fg: #fff;
+  --mut: #8a8a8a;
+  --line: #262626;
+  --d: 'Orbitron', 'Arial Black', sans-serif;
+  --b: 'Manrope', system-ui, sans-serif;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  background: #000;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--b);
+  overflow-x: hidden;
+}
+a {
+  color: inherit;
+}
+h1,
+h2,
+h3 {
+  font-family: var(--d);
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 0.95;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+}
+img,
+canvas {
+  max-width: 100%;
+}
+html,
+body {
+  overflow-x: clip;
+}
