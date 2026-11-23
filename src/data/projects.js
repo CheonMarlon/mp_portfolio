@@ -3,6 +3,7 @@
  *  shots:       image paths, relative to index.html
  *  video:       optional YouTube video ID; adds a "Demo" tab to the project
  *  videoPoster: optional image path for the video thumbnail (defaults to YouTube's)
+ *  note:        optional short status label shown in place of missing links
  */
 export const PROJECTS = [
   {
@@ -24,6 +25,7 @@ export const PROJECTS = [
     desc: 'An AI-powered platform designed to help barangay officials access legal information and prepare documents for dispute resolution.',
     tech: ['Next.js', 'React Native', 'Node.js', 'TypeScript', 'Express', 'Supabase'],
     links: { github: '', live: '' },
+    note: 'Private project',
     video: 'fNvApzsw3js', // YouTube video ID (optional)
     views: {
       web: {
@@ -61,7 +63,10 @@ export const PROJECTS = [
     sub: 'Anonymous Letter Sharing Platform',
     desc: 'A web platform where people can anonymously write, discover, and read letters from strangers.',
     tech: ['HTML', 'CSS', 'JavaScript', 'Firebase Firestore', 'Azure'],
-    links: { github: '', live: '' },
+    links: {
+      github: 'https://github.com/CheonMarlon/dear-stranger',
+      live: 'https://dear-stranger-orpin.vercel.app/',
+    },
     views: {
       web: {
         label: 'Web app',
@@ -86,6 +91,7 @@ export const PROJECTS = [
     desc: 'A native Android application for viewing and exploring the coordinates of real-world constellations.',
     tech: ['Kotlin', 'Android'],
     links: { github: '', live: '' },
+    note: 'Private repository · APK coming soon',
     views: {
       mobile: {
         label: 'Android app',
